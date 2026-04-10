@@ -7,7 +7,11 @@
 - `Pymunk` 物理空间，带重力和高摩擦地面
 - `Pygame` 可视化渲染与 `--headless` 高速评估模式
 - 三角形软体生物（3 质点 + 3 弹簧）
-- 弹簧控制方程：\(L(t)=L_{base}+A\sin(\omega t+\phi)\)
+- 弹簧控制方程：
+
+$$
+L(t)=L_{\text{base}} + A \sin(\omega t + \phi)
+$$
 - 基因编码：每条弹簧对应 `A, ω, φ`，共 9 维浮点染色体
 - 适应度函数：10 秒仿真后，质心在 X 方向的位移
 - 遗传算法：
@@ -26,7 +30,7 @@
 ## 项目结构
 
 ```text
-GA/
+soft-body-creature-evolution-simulator/
 ├─ results/
 ├─ src/
 │  ├─ config.py          # 仿真与进化配置
