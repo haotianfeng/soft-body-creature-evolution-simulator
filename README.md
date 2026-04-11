@@ -45,10 +45,21 @@ soft-body-creature-evolution-simulator/
 
 ## 安装依赖
 
+建议在 Python 3.10+ 环境下运行。
+
 ```powershell
-& "d:\GA\.venv\Scripts\Activate.ps1"
+# 1. 创建虚拟环境 (可选)
+python -m venv .venv
+
+# 2. 激活虚拟环境
+# Windows:
+.\.venv\Scripts\Activate.ps1
+# Mac/Linux:
+source .venv/bin/activate
+
+# 3. 安装依赖库
 pip install -r requirements.txt
-```
+
 
 ## 运行方式
 
@@ -93,7 +104,7 @@ python src/main.py --replay results/best_genome_overall.json --seconds 8
 
 ## 适应度函数说明
 
-每个个体的基因会被解码成 3 根弹簧的振幅、频率和相位，然后在物理引擎中仿真 10 秒。记初始质心横坐标为 \(x_0\)，仿真结束时的质心横坐标为 \(x_T\)，则适应度定义为：
+每个个体的基因会被解码成 3 根弹簧的振幅、频率和相位，然后在物理引擎中仿真 10 秒。记初始质心横坐标为 \(x_{0})，仿真结束时的质心横坐标为 \(x_{T})，则适应度定义为：
 
 $$
 \text{fitness} = x_{T} - x_{0}
