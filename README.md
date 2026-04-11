@@ -77,7 +77,7 @@ source .venv/bin/activate
 
 # 3. 安装依赖库
 pip install -r requirements.txt
-
+```
 
 ## 运行方式
 
